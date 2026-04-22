@@ -1,0 +1,233 @@
+{%- comment -%}
+  Tiipikids — Beach & Outdoor Collection Template
+
+  Usage:
+    1. In Shopify admin, create a collection with handle `beach-time` and
+       assign these products:
+         - beach-pool-with-3pc-water-bags
+         - beach-pool-with-shade
+         - beach-bucket-set-4pc-with-shovel
+    2. Copy this file to templates/collection.beach-time.liquid
+       (Shopify 1.0) or use as reference for a JSON template section
+       (Shopify 2.0).
+    3. In the collection admin, set the template to "collection.beach-time".
+
+  SEO keywords targeted: toddler beach toys, portable kiddie pool,
+  beach essentials for kids.
+{%- endcomment -%}
+
+<style>
+  .tk-collection {
+    --tk-green-deep: #3F5D4A;
+    --tk-green-soft: #EDF2EE;
+    --tk-sand: #F5EFE4;
+    --tk-cream: #FAFAF7;
+    --tk-ink: #1F2421;
+    --tk-neutral: #4A4A47;
+    --tk-muted: #6F7670;
+    --tk-border: #E3E8E4;
+    --tk-accent: #D96C4A;
+    font-family: inherit;
+    color: var(--tk-ink);
+    background: var(--tk-cream);
+  }
+  .tk-collection *, .tk-collection *::before, .tk-collection *::after { box-sizing: border-box; }
+  .tk-collection__wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  .tk-collection__hero {
+    background: linear-gradient(180deg, var(--tk-sand) 0%, var(--tk-cream) 100%);
+    padding: 56px 0 48px;
+    text-align: center;
+  }
+  .tk-collection__eyebrow {
+    display: inline-block;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--tk-green-deep);
+    background: #fff;
+    padding: 6px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  .tk-collection__title {
+    font-size: 34px; line-height: 1.1;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+    font-weight: 800;
+  }
+  .tk-collection__lede {
+    font-size: 17px;
+    color: var(--tk-neutral);
+    margin: 0 auto;
+    max-width: 640px;
+  }
+  @media (min-width: 860px) {
+    .tk-collection__hero { padding: 80px 0 64px; }
+    .tk-collection__title { font-size: 44px; }
+    .tk-collection__lede { font-size: 19px; }
+  }
+
+  .tk-collection__seo {
+    padding: 40px 0;
+    background: #fff;
+    border-top: 1px solid var(--tk-border);
+    border-bottom: 1px solid var(--tk-border);
+  }
+  .tk-collection__seo-inner { max-width: 760px; margin: 0 auto; }
+  .tk-collection__seo p {
+    font-size: 16px;
+    color: var(--tk-neutral);
+    line-height: 1.7;
+    margin: 0 0 16px;
+  }
+  .tk-collection__seo p:last-child { margin-bottom: 0; }
+
+  .tk-collection__grid-wrap { padding: 56px 0; }
+  .tk-collection__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+  }
+  .tk-product-card {
+    background: #fff;
+    border: 1px solid var(--tk-border);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .tk-product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(31,36,33,0.08);
+    text-decoration: none;
+  }
+  .tk-product-card__img {
+    aspect-ratio: 1/1;
+    background: var(--tk-sand);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--tk-muted);
+    font-size: 13px;
+  }
+  .tk-product-card__img img {
+    width: 100%; height: 100%; object-fit: cover;
+    display: block;
+  }
+  .tk-product-card__body { padding: 16px 18px 20px; }
+  .tk-product-card__title {
+    font-size: 15.5px; font-weight: 700;
+    margin: 0 0 6px;
+    color: var(--tk-ink);
+    line-height: 1.3;
+  }
+  .tk-product-card__price {
+    font-size: 15px;
+    color: var(--tk-neutral);
+    font-weight: 600;
+  }
+  .tk-product-card__unavailable {
+    font-size: 12px; font-weight: 600;
+    color: var(--tk-muted);
+    margin-left: 6px;
+  }
+
+  .tk-collection__empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--tk-muted);
+  }
+</style>
+
+<div class="tk-collection">
+
+  <!-- HERO -->
+  <header class="tk-collection__hero">
+    <div class="tk-collection__wrap">
+      <span class="tk-collection__eyebrow">Beach &amp; Outdoor</span>
+      <h1 class="tk-collection__title">Toddler Beach Toys Built for Real Beach Days</h1>
+      <p class="tk-collection__lede">
+        The portable kiddie pool that stays put on sand, the silicone bucket set that survives real toddler play, and the shade-pool upgrade for midday sun. Everything you need for beach essentials for kids — and nothing you don't.
+      </p>
+    </div>
+  </header>
+
+  <!-- SEO DESCRIPTION -->
+  <section class="tk-collection__seo">
+    <div class="tk-collection__wrap tk-collection__seo-inner">
+      {%- if collection.description != blank -%}
+        {{ collection.description }}
+      {%- else -%}
+        <p>If you've ever wrestled a flimsy inflatable across hot sand or watched a cheap plastic shovel snap on day one, you already know why <strong>toddler beach toys</strong> and <strong>portable kiddie pools</strong> need to be built differently. Tiipikids' beach collection is engineered for sandy, uneven, sun-blasted real-world conditions — not a flat backyard lawn.</p>
+        <p>Our flagship beach pool folds flat into your main tote, weighs under two pounds dry, and uses three water-bag anchors to stay steady on uneven sand. Pair it with the silicone beach bucket set (the shovel flexes instead of snapping) and you've got a full summer of <strong>beach essentials for kids</strong> in one shipment. Made from BPA-free, non-toxic food-grade silicone, UV-stable, and designed to last summer after summer.</p>
+      {%- endif -%}
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="tk-collection__grid-wrap">
+    <div class="tk-collection__wrap">
+      {%- if collection.products_count > 0 -%}
+        <div class="tk-collection__grid">
+          {%- for product in collection.products -%}
+            <a class="tk-product-card" href="{{ product.url }}" aria-label="View {{ product.title | escape }}">
+              <div class="tk-product-card__img">
+                {%- if product.featured_image -%}
+                  <img src="{{ product.featured_image | image_url: width: 800 }}"
+                       alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                       loading="lazy" width="800" height="800">
+                {%- else -%}
+                  <span>[Product image]</span>
+                {%- endif -%}
+              </div>
+              <div class="tk-product-card__body">
+                <h2 class="tk-product-card__title">{{ product.title }}</h2>
+                <div class="tk-product-card__price">
+                  {{ product.price | money }}
+                  {%- unless product.available -%}
+                    <span class="tk-product-card__unavailable">— Sold out</span>
+                  {%- endunless -%}
+                </div>
+              </div>
+            </a>
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <div class="tk-collection__empty">No products in this collection yet — check back soon.</div>
+      {%- endif -%}
+    </div>
+  </section>
+
+</div>
+
+{%- comment -%} JSON-LD CollectionPage schema {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Beach & Outdoor",
+  "description": "Toddler beach toys, portable kiddie pools, and beach essentials for kids. Silicone bucket sets and anchored beach pools built for real beach conditions.",
+  "url": "{{ shop.url }}{{ collection.url }}",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ shop.name | escape }}",
+    "url": "{{ shop.url }}"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": {{ collection.products_count | default: 0 }},
+    "itemListElement": [
+      {%- for product in collection.products limit: 20 -%}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "url": "{{ shop.url }}{{ product.url }}",
+        "name": {{ product.title | json }}
+      }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  }
+}
+</script>

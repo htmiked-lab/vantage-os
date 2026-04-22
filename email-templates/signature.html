@@ -1,0 +1,134 @@
+<!--
+  Tiipikids — HTML Email Signature
+
+  Install in Gmail:
+    Settings → See all settings → General → Signature → Create new.
+    Paste the rendered HTML. (In Gmail, paste with Cmd/Ctrl+V — Gmail
+    accepts tables and inline styles. Do NOT paste the source code
+    itself; instead open signature.html in a browser, select-all, copy,
+    and paste the rendered output.)
+
+  Install in Apple Mail:
+    Preferences → Signatures → drag the signature into the list, or
+    save this HTML file, open in Safari, select-all, copy, then paste
+    into the signature pane.
+
+  Install in Outlook:
+    File → Options → Mail → Signatures → New → paste the rendered
+    signature. Outlook is pickiest — if formatting breaks, re-paste
+    from Word first, then copy into Outlook.
+
+  Icon assets (required):
+    This signature references three icon PNGs hosted on your Shopify CDN.
+    Upload 64x64 PNG icons to Shopify (Settings → Files) and replace:
+      - {TIKTOK_ICON_URL}
+      - {INSTAGRAM_ICON_URL}
+      - {PINTEREST_ICON_URL}
+    with the uploaded file URLs. Public Shopify CDN URLs look like
+    https://cdn.shopify.com/s/files/1/NNNN/NNNN/files/tiktok.png
+
+  Notes:
+    - Uses table-based layout for email client compat (Outlook, Gmail,
+      Apple Mail, iOS, Android, Yahoo).
+    - All styles are inline — no external stylesheet.
+    - Fluid up to ~520px, degrades gracefully on narrow mobile.
+    - No JavaScript. No web fonts (uses email-safe Arial/Helvetica stack).
+-->
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1F2421;font-size:14px;line-height:1.5;max-width:520px;">
+  <tbody>
+
+    <!-- Brand line -->
+    <tr>
+      <td style="padding:0 0 4px 0;">
+        <span style="font-size:17px;font-weight:700;color:#3F5D4A;letter-spacing:0.01em;">Tiipikids</span>
+      </td>
+    </tr>
+
+    <!-- Tagline -->
+    <tr>
+      <td style="padding:0 0 10px 0;">
+        <span style="font-size:13px;color:#4A4A47;font-style:italic;">Bath time &amp; beach time, made easier.</span>
+      </td>
+    </tr>
+
+    <!-- Separator -->
+    <tr>
+      <td style="padding:0 0 10px 0;">
+        <div style="height:1px;line-height:1px;font-size:1px;background:#E3E8E4;width:160px;">&nbsp;</div>
+      </td>
+    </tr>
+
+    <!-- Website -->
+    <tr>
+      <td style="padding:0 0 8px 0;">
+        <a href="https://tiipikids.com" style="color:#3F5D4A;text-decoration:none;font-weight:600;font-size:13.5px;">tiipikids.com</a>
+      </td>
+    </tr>
+
+    <!-- Social icons row -->
+    <tr>
+      <td style="padding:0 0 14px 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+          <tbody>
+            <tr>
+              <td style="padding:0 8px 0 0;" valign="middle">
+                <a href="https://www.tiktok.com/@tiipi" style="text-decoration:none;" aria-label="Tiipikids on TikTok">
+                  <img src="{TIKTOK_ICON_URL}"
+                       alt="TikTok"
+                       width="22" height="22"
+                       style="display:block;border:0;width:22px;height:22px;border-radius:4px;">
+                </a>
+              </td>
+              <td style="padding:0 14px 0 0;" valign="middle">
+                <a href="https://www.tiktok.com/@tiipi" style="color:#4A4A47;text-decoration:none;font-size:12.5px;">@tiipi</a>
+              </td>
+
+              <td style="padding:0 8px 0 0;" valign="middle">
+                <a href="https://www.instagram.com/tiipi_" style="text-decoration:none;" aria-label="Tiipikids on Instagram">
+                  <img src="{INSTAGRAM_ICON_URL}"
+                       alt="Instagram"
+                       width="22" height="22"
+                       style="display:block;border:0;width:22px;height:22px;border-radius:4px;">
+                </a>
+              </td>
+              <td style="padding:0 14px 0 0;" valign="middle">
+                <a href="https://www.instagram.com/tiipi_" style="color:#4A4A47;text-decoration:none;font-size:12.5px;">@tiipi_</a>
+              </td>
+
+              <td style="padding:0 8px 0 0;" valign="middle">
+                <a href="https://www.pinterest.com/Tiipi_" style="text-decoration:none;" aria-label="Tiipikids on Pinterest">
+                  <img src="{PINTEREST_ICON_URL}"
+                       alt="Pinterest"
+                       width="22" height="22"
+                       style="display:block;border:0;width:22px;height:22px;border-radius:4px;">
+                </a>
+              </td>
+              <td valign="middle">
+                <a href="https://www.pinterest.com/Tiipi_" style="color:#4A4A47;text-decoration:none;font-size:12.5px;">@Tiipi_</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Bestsellers CTA -->
+    <tr>
+      <td style="padding:0;">
+        <a href="https://tiipikids.com/collections/bestsellers"
+           style="display:inline-block;background:#3F5D4A;color:#FFFFFF;text-decoration:none;font-size:12.5px;font-weight:700;letter-spacing:0.02em;padding:8px 14px;border-radius:999px;mso-padding-alt:8px 14px;">
+          Shop our bestsellers &nbsp;&rsaquo;
+        </a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<!--
+  Fallback if images are blocked:
+  Many email clients block external images by default. This signature
+  degrades gracefully — the social handle text (@tiipi, @tiipi_, @Tiipi_)
+  is always visible and clickable even if the icons don't load.
+-->
