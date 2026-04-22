@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="index, follow" />
+  <title>Tiipikids Beach Pool — The Beach Pool That Actually Stays Put</title>
+  <meta name="description" content="The Tiipikids Beach Pool uses water-bag anchors to stay put on uneven sand. Folds flat, sets up in 2 minutes, fits in your beach tote. $49.99. Free shipping $50+." />
+
+  <link rel="preconnect" href="https://tiipikids.com" />
+
+  <style>
+    :root {
+      --tk-green-deep: #3F5D4A;
+      --tk-green: #547960;
+      --tk-green-soft: #EDF2EE;
+      --tk-sand: #F5EFE4;
+      --tk-cream: #FAFAF7;
+      --tk-ink: #1F2421;
+      --tk-neutral: #4A4A47;
+      --tk-muted: #6F7670;
+      --tk-border: #E3E8E4;
+      --tk-accent: #D96C4A;
+      --tk-accent-hover: #BF5A3B;
+      --radius: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 2px rgba(31,36,33,0.06), 0 2px 6px rgba(31,36,33,0.04);
+      --shadow-md: 0 4px 12px rgba(31,36,33,0.08), 0 12px 32px rgba(31,36,33,0.06);
+      --max: 1100px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--tk-ink);
+      background: var(--tk-cream);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--tk-green-deep); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--tk-accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: 0.01em;
+      padding: 16px 28px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease;
+      text-decoration: none;
+      box-shadow: var(--shadow-sm);
+      min-height: 52px;
+    }
+    .btn:hover {
+      background: var(--tk-accent-hover);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .btn:active { transform: translateY(0); }
+
+    .btn--ghost {
+      background: transparent;
+      color: var(--tk-green-deep);
+      border: 2px solid var(--tk-green-deep);
+      box-shadow: none;
+    }
+    .btn--ghost:hover { background: var(--tk-green-soft); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, var(--tk-sand) 0%, var(--tk-cream) 100%);
+      padding: 40px 0 56px;
+    }
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .hero__eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--tk-green-deep);
+      background: #fff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 34px;
+      line-height: 1.1;
+      margin: 0 0 16px;
+      color: var(--tk-ink);
+      letter-spacing: -0.01em;
+      font-weight: 800;
+    }
+    .hero__sub {
+      font-size: 17px;
+      color: var(--tk-neutral);
+      margin: 0 0 20px;
+      max-width: 540px;
+    }
+    .hero__price {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 20px 0 24px;
+    }
+    .hero__price-main {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--tk-ink);
+    }
+    .hero__price-note {
+      font-size: 14px;
+      color: var(--tk-muted);
+    }
+    .hero__cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .hero__stars {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--tk-neutral);
+    }
+    .hero__stars-icon {
+      color: #D8A93A;
+      letter-spacing: 2px;
+      font-size: 16px;
+    }
+    .hero__image {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-md);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--tk-muted);
+      font-size: 14px;
+      border: 1px solid var(--tk-border);
+    }
+
+    @media (min-width: 860px) {
+      .hero { padding: 64px 0 80px; }
+      .hero__inner {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 48px;
+      }
+      .hero h1 { font-size: 48px; }
+      .hero__sub { font-size: 19px; }
+    }
+
+    /* TRUST BAR */
+    .trust {
+      background: #fff;
+      border-top: 1px solid var(--tk-border);
+      border-bottom: 1px solid var(--tk-border);
+      padding: 20px 0;
+    }
+    .trust__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .trust__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px;
+      background: var(--tk-green-soft);
+      border-radius: 10px;
+      color: var(--tk-green-deep);
+      font-weight: 600;
+      font-size: 13px;
+      text-align: center;
+    }
+    .trust__item svg {
+      width: 20px; height: 20px; flex-shrink: 0;
+    }
+    @media (min-width: 640px) {
+      .trust__grid { grid-template-columns: repeat(4, 1fr); }
+      .trust__item { font-size: 15px; padding: 12px; }
+      .trust__item svg { width: 24px; height: 24px; }
+    }
+
+    /* SECTIONS */
+    section { padding: 56px 0; }
+    @media (min-width: 860px) { section { padding: 80px 0; } }
+
+    .section__head {
+      max-width: 640px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+    .section__head h2 {
+      font-size: 28px;
+      line-height: 1.15;
+      margin: 0 0 12px;
+      letter-spacing: -0.01em;
+      font-weight: 800;
+    }
+    .section__head p {
+      font-size: 17px;
+      color: var(--tk-neutral);
+      margin: 0;
+    }
+    @media (min-width: 860px) {
+      .section__head h2 { font-size: 36px; }
+    }
+
+    /* BENEFITS */
+    .benefits { background: var(--tk-cream); }
+    .benefits__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 860px) {
+      .benefits__grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    }
+    .benefit {
+      background: #fff;
+      border: 1px solid var(--tk-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .benefit__icon {
+      width: 48px; height: 48px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 12px;
+      background: var(--tk-green-soft);
+      color: var(--tk-green-deep);
+      margin-bottom: 18px;
+    }
+    .benefit__icon svg { width: 26px; height: 26px; }
+    .benefit h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+      font-weight: 700;
+    }
+    .benefit p {
+      margin: 0;
+      color: var(--tk-neutral);
+      font-size: 15.5px;
+      line-height: 1.55;
+    }
+
+    /* SOCIAL PROOF */
+    .social { background: var(--tk-green-soft); }
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 860px) {
+      .reviews { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    }
+    .review {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .review__stars {
+      color: #D8A93A;
+      letter-spacing: 2px;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    .review p {
+      margin: 0 0 16px;
+      font-size: 16px;
+      color: var(--tk-ink);
+      line-height: 1.55;
+    }
+    .review__name {
+      font-size: 14px;
+      color: var(--tk-muted);
+      font-weight: 600;
+    }
+    .review__badge {
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 11px;
+      color: var(--tk-green-deep);
+      background: var(--tk-green-soft);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* COMPARE */
+    .compare { background: var(--tk-sand); }
+    .compare__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 860px) {
+      .compare__grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+    }
+    .compare__card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      border: 1px solid var(--tk-border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .compare__card--featured {
+      border: 2px solid var(--tk-green-deep);
+      position: relative;
+    }
+    .compare__tag {
+      position: absolute;
+      top: -12px;
+      left: 24px;
+      background: var(--tk-green-deep);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .compare__title {
+      font-size: 21px;
+      font-weight: 800;
+      margin: 0 0 4px;
+    }
+    .compare__price {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--tk-ink);
+      margin: 0 0 16px;
+    }
+    .compare__list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      flex-grow: 1;
+    }
+    .compare__list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 15px;
+      color: var(--tk-neutral);
+    }
+    .compare__check {
+      flex: 0 0 auto;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--tk-green-deep);
+      color: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .compare__check svg { width: 11px; height: 11px; }
+    .compare__card .btn {
+      width: 100%;
+    }
+
+    /* FAQ */
+    .faq { background: #fff; }
+    .faq__list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .faq__item { border-bottom: 1px solid var(--tk-border); }
+    .faq__item:first-child { border-top: 1px solid var(--tk-border); }
+    .faq__q {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--tk-ink);
+    }
+    .faq__q::-webkit-details-marker { display: none; }
+    .faq__icon {
+      flex: 0 0 auto;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--tk-green-soft);
+      color: var(--tk-green-deep);
+      display: inline-flex; align-items: center; justify-content: center;
+      transition: transform 0.2s ease;
+    }
+    .faq__icon svg { width: 14px; height: 14px; }
+    details[open] .faq__icon { transform: rotate(45deg); }
+    .faq__a {
+      padding: 0 0 22px;
+      color: var(--tk-neutral);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* FINAL CTA */
+    .final {
+      background: var(--tk-green-deep);
+      color: #fff;
+      text-align: center;
+    }
+    .final h2 {
+      color: #fff;
+      font-size: 30px;
+      margin: 0 0 12px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    .final p {
+      color: rgba(255,255,255,0.85);
+      font-size: 17px;
+      margin: 0 auto 28px;
+      max-width: 560px;
+    }
+    .final .btn {
+      background: #fff;
+      color: var(--tk-green-deep);
+    }
+    .final .btn:hover { background: var(--tk-sand); }
+    .final__price {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      margin-top: 16px;
+    }
+    @media (min-width: 860px) {
+      .final h2 { font-size: 40px; }
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 24px 0 120px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--tk-muted);
+    }
+    @media (min-width: 860px) {
+      footer { padding: 24px 0 40px; }
+    }
+    footer a { color: var(--tk-muted); }
+
+    /* STICKY MOBILE CTA */
+    .sticky-cta {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 50;
+      background: #fff;
+      border-top: 1px solid var(--tk-border);
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 -4px 20px rgba(31,36,33,0.08);
+    }
+    .sticky-cta__info { flex: 1 1 auto; min-width: 0; }
+    .sticky-cta__name {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--tk-ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .sticky-cta__price {
+      font-size: 13px;
+      color: var(--tk-muted);
+    }
+    .sticky-cta .btn {
+      padding: 12px 20px;
+      font-size: 15px;
+      min-height: 44px;
+    }
+    @media (min-width: 860px) {
+      .sticky-cta { display: none; }
+      footer { padding-bottom: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero__inner">
+      <div>
+        <span class="hero__eyebrow">Engineered for real beach days</span>
+        <h1>The beach pool that actually stays put.</h1>
+        <p class="hero__sub">
+          Most beach pools flop around on uneven sand. The Tiipikids Beach Pool uses three water-bag anchors to weight the corners down — steady on dunes, waves, and over-eager toddlers. Folds flat, fits in your beach tote, drains in seconds.
+        </p>
+
+        <div class="hero__price">
+          <span class="hero__price-main">$49.99</span>
+          <span class="hero__price-note">Free shipping over $50 &middot; 30-day returns</span>
+        </div>
+
+        <div class="hero__cta-row">
+          <a href="https://tiipikids.com/products/beach-pool-with-3pc-water-bags" class="btn">Get the Beach Pool</a>
+        </div>
+
+        <div class="hero__stars" aria-label="Rated 4.8 out of 5 stars">
+          <span class="hero__stars-icon" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span>4.8 / 5 &middot; 500+ verified reviews</span>
+        </div>
+      </div>
+
+      <div class="hero__image" role="img" aria-label="Tiipikids Beach Pool product photo">
+        <span>[Beach Pool hero image]</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <section class="trust" aria-label="Brand trust highlights">
+    <div class="wrap">
+      <div class="trust__grid">
+        <div class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>BPA-Free</span>
+        </div>
+        <div class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-7 11-7 11h-4z"/><path d="M8 10l2 2 4-4"/></svg>
+          <span>Non-Toxic</span>
+        </div>
+        <div class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 13L7 22l5-3 5 3-1.5-9"/></svg>
+          <span>25,000+ Sold</span>
+        </div>
+        <div class="trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M15 20c0-2 2-4 4-4s2.5 1.5 2.5 4"/></svg>
+          <span>Designed by Parents</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Three things that change your beach day</h2>
+        <p>Designed for sandy, uneven, wind-blown real-world conditions — not a flat backyard lawn.</p>
+      </div>
+
+      <div class="benefits__grid">
+        <div class="benefit">
+          <div class="benefit__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 8 6 12a6 6 0 1 1-12 0c0-4 6-12 6-12z"/></svg>
+          </div>
+          <h3>Water fill bags anchor it</h3>
+          <p>Three water-bag anchors weight the corners of the pool so it stays level on uneven sand. Fill them from the shore, reuse them all day, no buckets or stakes required.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+          </div>
+          <h3>Sets up in 2 minutes</h3>
+          <p>Pops open from the tote, anchors fill in thirty seconds at the shore, done. No pump, no poles, no instructions to reread every trip. Teardown is just as fast.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M8 6v12"/><path d="M16 6v12"/></svg>
+          </div>
+          <h3>Folds flat for travel</h3>
+          <p>Under 2 pounds dry. Folds into a pocket of your main beach tote. One bag from car to sand — no second trip, no bulky bulge, no fighting an inflatable across a parking lot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="social">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>500+ parents, 4.8 stars</h2>
+        <p>Real reviews from real beach days.</p>
+      </div>
+
+      <div class="reviews">
+        <div class="review">
+          <div class="review__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"The water bags are the game-changer. Our old pool used to drift with every wave. This one has not moved once in ten beach trips."</p>
+          <span class="review__name">Alex P.</span><span class="review__badge">Verified Buyer</span>
+        </div>
+
+        <div class="review">
+          <div class="review__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Fits in my main tote. Sets up before my toddler has shoes off. This is the only beach gear I'll recommend to other parents this summer."</p>
+          <span class="review__name">Jenna M.</span><span class="review__badge">Verified Buyer</span>
+        </div>
+
+        <div class="review">
+          <div class="review__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Three summers in, still looking new. No cracks, no fading, the anchors still seal perfectly. Built way better than the price suggests."</p>
+          <span class="review__name">Marcus T.</span><span class="review__badge">Verified Buyer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="compare">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Pick the one that fits your beach</h2>
+        <p>Same anchored design, same build quality. The shaded version adds a UPF 50+ canopy for harsher sun.</p>
+      </div>
+
+      <div class="compare__grid">
+        <div class="compare__card compare__card--featured">
+          <span class="compare__tag">Best seller</span>
+          <h3 class="compare__title">Tiipikids Beach Pool</h3>
+          <div class="compare__price">$49.99</div>
+          <ul class="compare__list">
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>3 water-bag anchors</span></li>
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>Folds flat, under 2 lbs</span></li>
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>Fast-drain plug</span></li>
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>Puncture-resistant material</span></li>
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>Best for: morning trips or beaches with natural shade</span></li>
+          </ul>
+          <a href="https://tiipikids.com/products/beach-pool-with-3pc-water-bags" class="btn">Get it for $49.99</a>
+        </div>
+
+        <div class="compare__card">
+          <h3 class="compare__title">Beach Pool with Shade</h3>
+          <div class="compare__price">$69.99</div>
+          <ul class="compare__list">
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>Everything in the standard pool, plus:</span></li>
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>Integrated UPF 50+ canopy</span></li>
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>Keeps water cooler through midday sun</span></li>
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>All-in-one sun and water zone</span></li>
+            <li><span class="compare__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 20 7"/></svg></span><span>Best for: midday trips, sunny beaches, littlest kids</span></li>
+          </ul>
+          <a href="https://tiipikids.com/products/beach-pool-with-3pc-water-bags" class="btn btn--ghost">See the shade version</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Questions parents ask</h2>
+        <p>Tap to expand.</p>
+      </div>
+
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary class="faq__q">
+            How does it stay in place?
+            <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="faq__a">
+            Three water-bag anchors fill up at the shore in under a minute and clip to the corners of the pool. They add enough weight to keep the pool level on uneven sand, steady when a toddler climbs in from the side, and anchored against light wind. No stakes, no rocks, no drifting.
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">
+            How long does setup take?
+            <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="faq__a">
+            About 2 minutes from tote to filled pool. Unfold, pop open, fill the anchors at the water's edge, fill the pool. No pump, no poles, no reading instructions again. Teardown is under a minute — pull the drain plug, shake out, fold.
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">
+            What ages is it for?
+            <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="faq__a">
+            Best for ages 6 months through 5 years. Water depth is easily controlled (keep it shallow for the smallest kids), and the pool is roomy enough for two toddlers to play at once. Always supervise water play, even in shallow pools.
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">
+            Does it fold flat?
+            <span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="faq__a">
+            Yes — completely flat, under 2 pounds dry. Fits in a pocket of most standard beach totes alongside towels and a cooler. No bulky shape, no air chambers to deflate, no storage bag to lose.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <h2>Ready for an easier beach day?</h2>
+      <p>Ships in 1–2 business days. Folds into your tote. Stays where you put it.</p>
+      <a href="https://tiipikids.com/products/beach-pool-with-3pc-water-bags" class="btn">Get the Beach Pool</a>
+      <div class="final__price">$49.99 &middot; Free shipping over $50 &middot; 30-day returns</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      &copy; Tiipikids. Built for real beach days. <a href="https://tiipikids.com">Visit tiipikids.com</a>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta" aria-label="Quick add">
+    <div class="sticky-cta__info">
+      <div class="sticky-cta__name">Tiipikids Beach Pool</div>
+      <div class="sticky-cta__price">$49.99 &middot; Free shipping $50+</div>
+    </div>
+    <a href="https://tiipikids.com/products/beach-pool-with-3pc-water-bags" class="btn">Add to Cart</a>
+  </div>
+
+</body>
+</html>

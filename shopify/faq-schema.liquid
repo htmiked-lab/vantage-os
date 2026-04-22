@@ -1,0 +1,179 @@
+{%- comment -%}
+  Tiipikids FAQPage Schema Markup
+  Injectable JSON-LD for Shopify theme.liquid / product templates
+
+  Usage:
+    1. Save this file in snippets/ as `faq-schema.liquid`
+    2. In theme.liquid (or your product template), add before </head>:
+         {% render 'faq-schema' %}
+    3. Renders only on product pages for the 3 handles below.
+
+  What this does:
+    - Outputs a valid FAQPage schema (JSON-LD) for each supported product.
+    - FAQs match the buyer questions we hear most often — keep them in
+      sync with the FAQ section displayed on each PDP, or Google may
+      flag the schema as mismatched.
+
+  Supported handles:
+    - bath-buddy-set-bath-toy-organizer-with-4-pc-silicone-set
+    - beach-pool-with-3pc-water-bags
+    - beach-pool-with-shade
+{%- endcomment -%}
+
+{%- if template.name == 'product' -%}
+
+  {%- case product.handle -%}
+
+    {%- when 'bath-buddy-set-bath-toy-organizer-with-4-pc-silicone-set' -%}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Will the suction cups actually hold up?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We tested the suction mount across hundreds of baths with real toddlers — no falls. Wet the suction cups, press firmly onto clean tile or a smooth tub wall, and they stay put. If they ever fail within the first year, we'll replace them free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the Bath Buddy Set really mold-proof?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The toys are solid food-grade silicone with no hollow interior, so mold has nowhere to grow — there is no inside for water to get trapped in. The organizer has drainage holes that empty water fast and wipes clean in seconds. A weekly rinse and a monthly dishwasher cycle keeps everything fresh for years."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What age is the Bath Buddy Set for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Designed for babies 6 months and up through early preschool. The toys are safe to mouth (food-grade silicone), soft on gums, and shaped for small hands. Many families keep using the set through age 5+ for imaginative bath play."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it dishwasher safe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — both the organizer and the four silicone toys are top-rack dishwasher safe. We recommend a sanitize cycle once a month for easy deep cleaning. The silicone holds up to heat, detergent, and repeated washing without fading or warping."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's your return policy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "30-day happiness guarantee. If the Bath Buddy Set isn't making bath time better, send it back for a full refund — no questions, no weird hoops. Free shipping on returns within the US."
+            }
+          }
+        ]
+      }
+      </script>
+
+    {%- when 'beach-pool-with-3pc-water-bags' -%}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does the Tiipikids Beach Pool stay in place on sand?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Three water-bag anchors fill up at the shore in under a minute and clip to the corners of the pool. They add enough weight to keep the pool level on uneven sand, steady when a toddler climbs in from the side, and anchored against light wind — no stakes, rocks, or sand piling required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does the beach pool take to set up?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "About 2 minutes from tote to filled pool. Unfold, pop open, fill the water-bag anchors at the water's edge, fill the pool. No pump, no poles, no instructions to reread every trip. Teardown is under a minute — pull the drain plug, shake out sand, fold flat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What ages is the Tiipikids Beach Pool for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Best for ages 6 months through 5 years. Water depth is easily controlled (keep it shallow for the smallest kids), and the pool is roomy enough for two toddlers to play at once. Always supervise water play, even in shallow pools."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the beach pool fold flat for travel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — completely flat, under 2 pounds dry. Fits in a pocket of most standard beach totes alongside towels and a cooler. No bulky shape, no air chambers to deflate, no storage bag to lose."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the material safe for kids and the ocean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The pool is made from BPA-free, phthalate-free, non-toxic materials that meet food-contact safety standards. It's puncture-resistant against shell fragments and sand grit, and doesn't shed microplastics into the water or sand."
+            }
+          }
+        ]
+      }
+      </script>
+
+    {%- when 'beach-pool-with-shade' -%}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much sun protection does the canopy provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The integrated canopy is UPF 50+ rated, which blocks approximately 98% of UV rays. It shades both the water and your toddler, keeps water temperature cooler throughout the day, and is the most efficient sun-and-water setup we've found for midday beach trips."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the canopy handle windy beach conditions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The three water-bag anchors ground the pool well in light to moderate wind. In strong gusts (above 15 mph), we recommend collapsing the canopy or pairing it with a separate staked shade structure. The canopy frame itself is reinforced to withstand repeated setup and breakdown."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the Beach Pool with Shade worth the extra $20 over the standard version?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you beach during midday sun, go to beaches with little natural shade, or have kids under 2, the canopy version is worth it — it replaces a separate pop-up tent and keeps water cooler. If you mostly beach in the morning or afternoon and already own good shade gear, the standard Beach Pool covers you at a lower price."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does the Beach Pool with Shade take to set up?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "About 2 to 3 minutes. The canopy adds roughly 30 to 60 seconds over the standard pool — unfold, pop the frame, position the canopy, then fill the anchors and pool. Teardown is similarly fast. No pump, no separate poles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's in the box?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One portable beach pool with built-in UPF 50+ canopy, three water-bag anchors, and a fast-drain plug. Folds into a carry tote that fits alongside your beach bag. Covered by our 30-day happiness guarantee."
+            }
+          }
+        ]
+      }
+      </script>
+
+  {%- endcase -%}
+
+{%- endif -%}
