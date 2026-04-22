@@ -184,10 +184,16 @@
   const modal = document.getElementById("modal");
   const mdOutput = document.getElementById("mdOutput");
 
-  document.getElementById("exportBtn").addEventListener("click", () => {
+  function openMarkdownExport() {
     mdOutput.value = buildMarkdown();
     modal.classList.add("open");
-  });
+  }
+  document.querySelectorAll('[data-export="md"]').forEach(b =>
+    b.addEventListener("click", openMarkdownExport)
+  );
+  document.querySelectorAll('[data-export="proposal"], [data-export="course"]').forEach(b =>
+    b.addEventListener("click", () => alert("Export mode coming in v0.2 — use 'Markdown (raw)' for now."))
+  );
   document.getElementById("closeModal").addEventListener("click", () => modal.classList.remove("open"));
   modal.addEventListener("click", (e) => { if (e.target === modal) modal.classList.remove("open"); });
 
@@ -283,7 +289,7 @@
   document.addEventListener("keydown", (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s") {
       e.preventDefault();
-      document.getElementById("exportBtn").click();
+      openMarkdownExport();
     }
     if (e.key === "Escape") modal.classList.remove("open");
   });
