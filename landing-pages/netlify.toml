@@ -1,0 +1,79 @@
+# Tiipikids Landing Pages — Netlify Config
+#
+# Drag-and-drop this entire folder to the Netlify dashboard, or run:
+#   netlify deploy --dir=landing-pages --prod
+#
+# No build step — these are static HTML files with inline CSS.
+
+[build]
+  publish = "."
+
+# ---------- Clean URL rewrites (200 = internal serve, URL stays clean) ----------
+
+[[redirects]]
+  from = "/bath-buddy"
+  to = "/bath-buddy.html"
+  status = 200
+
+[[redirects]]
+  from = "/beach-pool"
+  to = "/beach-pool.html"
+  status = 200
+
+[[redirects]]
+  from = "/summer-bundle"
+  to = "/summer-bundle.html"
+  status = 200
+
+# ---------- Canonical redirects (.html → clean URL) for SEO ----------
+
+[[redirects]]
+  from = "/bath-buddy.html"
+  to = "/bath-buddy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/beach-pool.html"
+  to = "/beach-pool"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/summer-bundle.html"
+  to = "/summer-bundle"
+  status = 301
+  force = true
+
+# ---------- Root → main store ----------
+
+[[redirects]]
+  from = "/"
+  to = "https://tiipikids.com"
+  status = 302
+  force = true
+
+# ---------- Hide deploy-reference files from public access ----------
+
+[[redirects]]
+  from = "/README.md"
+  to = "/"
+  status = 301
+  force = true
+
+# ---------- Headers ----------
+
+# Cache HTML with revalidation so updates show up fast after re-deploy.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Allow indexing — these are landing pages we want discoverable via ads/SEO.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
